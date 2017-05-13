@@ -10,6 +10,7 @@ function browserSyncTask() {
     'build/*.html',
     'build/css/*.css',
     'build/js/*.js',
+    'build/fonts/**',
   ];
 
   browserSync.init(files, {
@@ -22,6 +23,6 @@ function browserSyncTask() {
   gulp.watch('src/*.html', ['html']);
   gulp.watch('src/scss/*.scss', ['scss']);
   gulp.watch('src/js/*.js', ['js']);
-  //gulp.watch('src/js/*.js',['jshint']);
+  gulp.watch('src/fonts/**',['copyImages']);
   gulp.watch(files).on('change', browserSync.reload);
 }

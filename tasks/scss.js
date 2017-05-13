@@ -21,7 +21,7 @@ function scssTask() {
     .pipe(plumber())
     .pipe(sass().on('error', notify.onError('Deu ruim: <%= error.message %>')))
     .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(cssnano())
+    // .pipe(cssnano())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('build/css'))
     .pipe(notify('CSS OK!'));
