@@ -1,108 +1,46 @@
 html,
 body {
-  	font-family: 'antoniobold', Helvetica, Arial, Sans-serif;
-  	font-size: $font-size-default;
-  	line-height: 1.2em;
-  	-moz-osx-font-smoothing: grayscale;
-  	color: $text-default;
+	font-family: 'antoniobold', Helvetica, Arial, Sans-serif;
+	font-size: $font-size-default;
+	line-height: 1.2em;
+	-moz-osx-font-smoothing: grayscale;
+	color: $text-default;
 }
 
 h1 {
-	font-size: 5em;
+  font-size: 2.1em;
 	text-align: center;
 	line-height: 1em;
+  margin-bottom: .5em;
 }
 
 h2 {
-	font-size: 1.75em;
+  font-size: 1em;
 	text-align: center;
-	line-height: 1em;
+	line-height: 1.4em;
+  margin-bottom: .5em;
 }
 
-.icon-link::before {
-	content: '';
-	display: block;
-	background: url(../images/github-icon.svg);
-	width: 22px;
-	height: 22px;
+p {
+  font-size: $font-size-default / 1.2;
+  text-align: center;
 }
 
-// strong{
-//   font-family: 'open_sanssemibold';}
-
-// em{
-//   // font-family: 'open_sansitalic';}
-// h1{
-//   font-family: 'antoniobold';
-//   font-size: 3.2em;
-//   // font-size: 2.2em;
-//   line-height: 1.2em;}
-
-// h2{
-//   margin-bottom: .5em;
-//   font-family: 'antoniolight';
-//   // font-size: 3.2em;
-//   font-size: 2.6em;
-//   font-weight: lighter;
-//   line-height: 1.2em;
-//   // color: $brown;
-//   // @extend .text-shadow;
-//   // @include text-shadow(1px,1px,0,$white);
-// }
-
-// h3{
-//   margin-bottom: .5em;
-//   font-family: 'antoniolight';
-//   // font-size: 2.6em;
-//   font-size: 2em;
-//   font-weight: lighter;
-//   line-height: 1.2em;
-//   // color: $brown;
-//   // @include text-shadow(1px,1px,0,$white);
-// }
-
-// h4{
-//   margin-bottom: .5em;
-//   font-family: 'antoniolight';
-//   // font-size: 2.6em;
-//   font-size: 1.8em;
-//   font-weight: lighter;
-//   line-height: 1.2em;
-//   // color: $text-brown;
-//   // @include text-shadow(1px,1px,0,$white);
-// }
-
-// h5{
-//   margin-bottom: .5em;
-//   font-family: 'antoniolight';
-//   //font-size: 2.6em;
-//   font-size: 1.8em;
-//   font-weight: lighter;
-//   line-height: 1.2em;
-//   // color: $text-yellow;
-// }
-//   //@include text-shadow(1px,1px,0,$white);}
-
-// p{
-//   margin-bottom: 2em;
-//   line-height: 1.6em;
-//   // color: $text-grey;
-// }
-
-// li {
-//   margin-bottom: 5px;
-//   color: #4d4d4d;
-// }
-
-// time{
-//   font-family: 'antoniobold';
-//   //font-size: 3em;
-//   font-size: 2em;
-//   line-height: 1.1em;}
-
-// blockquote {
-//   text-align: center;
-//   p{
-//   font-style: italic;
-//   line-height: 1.2em;}
-// }
+.github-icon {
+  @extend %icon-link;
+  &::after{
+    background: url(../images/github-icon.svg);
+  }
+}
+.facebook-icon {
+  @extend %icon-link;
+  &::after{
+    background: url(../images/facebook-icon.svg);
+  }
+}
+.twitter-icon {
+  @extend %icon-link;
+  &::after{
+    background: url(../images/twitter-icon.svg);
+  }
+}

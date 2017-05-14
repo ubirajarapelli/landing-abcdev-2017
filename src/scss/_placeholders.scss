@@ -1,0 +1,11 @@
+%icon-link {
+  position: absolute;
+  top: -55px;
+  text-indent: -99999px;
+  &::after{
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
+}
