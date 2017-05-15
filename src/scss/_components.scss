@@ -1,0 +1,47 @@
+.ribbon {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 12.1em;
+  height: 12.1em;
+  font-family: 'antoniobold';
+  font-size: 1em;
+  text-decoration: none;
+  text-indent: -999999px;
+  pointer-events: none;
+  &:hover{
+    cursor: pointer;}
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    width: 15.38em;
+    height: 1.54em;
+    top: 1.5em;
+    right: -5em;
+    pointer-events: auto !important;
+    transform: rotate(45deg);}
+
+  &::before{
+    content: "";
+    padding: .28em 0;
+    background-color: $buttom-color;
+    text-shadow: 1px, 1px, 5px, rgba(0,0,0,.75);
+  }
+
+  &::after {
+    content: attr(title);
+    text-transform: uppercase;
+    color: $button-text-color;
+    line-height: 1.54em;
+    text-align: center;
+    text-indent: 0;
+    padding: .15em 0;
+    margin: .15em 0;}
+}
+.emphasis{
+  text-transform: uppercase;
+}

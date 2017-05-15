@@ -1,6 +1,7 @@
 @import '_antonio-webfont.scss';
 @import '_variables.scss';
 @import '_placeholders.scss';
+@import '_components.scss';
 @import '_text.scss';
 @import '_svg-elements.scss';
 
@@ -37,6 +38,7 @@ nav {
 }
 
 section {
+  position: relative;
 	display: block;
 	padding-top: $vertical-space-top;
 	background-image: url(../images/landscape.svg);
@@ -90,6 +92,7 @@ input {
 		border: 1px solid $button-text-color;
     cursor: pointer;
     -webkit-appearance: none;
+    transition: background-color .4s ease 0s;
     &:hover {
       background: $buttom-color;
     }
@@ -132,11 +135,28 @@ footer {
   }
 }
 
-@media (min-width: 320px) and (max-width: 768px){}
+@media (min-width: 320px) and (max-width: 768px){
+
+  .grass {
+    left: 50%;
+  }
+}
 
 @media(min-width: 768px) {
   nav {
     text-align: right;
+  }
+  .grass {
+    left: 20%;
+    & + .grass {
+      left: 50%;
+      & + .grass {
+        left: 80%;
+        & + .grass {
+          display: none;
+        }
+      }
+    }
   }
   footer {
     img {
@@ -170,6 +190,9 @@ footer {
   .elements-container {
     width: 60%;
   }
+  .grass {
+    left: 3%;
+  }
 
 }
 
@@ -178,6 +201,20 @@ footer {
   elements-container {
     width: 40%;
   }
+
+  .grass {
+    & + .grass {
+      left: 35%;
+      & + .grass {
+        left: 60%;
+        & + .grass {
+          display: block;
+          left: 85%;
+        }
+      }
+    }
+  }
+
   footer {
     img {
       width: 18%;
@@ -191,4 +228,18 @@ footer {
   }
 }
 
-@media (min-width: 1600px){}
+@media (min-width: 1600px){
+  .grass {
+    left: 8%;
+    & + .grass {
+      left: 45%;
+      & + .grass {
+        left: 70%;
+        & + .grass {
+          left: 90%;
+        }
+      }
+    }
+  }
+
+}
